@@ -1,3 +1,10 @@
-document.getElementById('actionButton').addEventListener('click', function() {
-    document.getElementById('message').textContent = '¡Botón clickeado!';
+
+import { handleButtonClick } from './clickHandler.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+  const button = document.getElementById('actionButton');
+  if (button) {
+    button.addEventListener('click', handleButtonClick);
+  }
 });
+
