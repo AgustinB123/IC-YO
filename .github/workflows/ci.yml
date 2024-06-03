@@ -18,8 +18,8 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Install Dependencies
+      - name: instalar dependecias Dependencies
         run: npm install
 
-      - name: Run Tests
+      - name: correr Tests
         run: npm test
