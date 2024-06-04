@@ -18,8 +18,17 @@ jobs:
         with:
           node-version: '14'
 
-      - name: instalar dependecias Dependencies
+      - name: Instalar Dependencias
         run: npm install
 
-      - name: correr Tests
+      - name: Correr Tests
         run: npm test
+
+      - name: Build Project
+        run: npm run build # Este comando debe generar tu sitio estático en un directorio como `dist` o `build`
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist # Cambia `./dist` por el directorio donde se generan tus archivos estáticos
