@@ -30,5 +30,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GH_TOKEN }} # Usa el secreto que creaste
+          branch: gh-pages
           publish_dir: ./dist # Cambia `./dist` por el directorio donde se generan tus archivos estáticos
