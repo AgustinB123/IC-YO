@@ -33,11 +33,11 @@ jobs:
         run: npm test
 
       - name: Build Project
-        run: npm run build # Este comando debe generar tu sitio estático en un directorio como `dist` o `build`
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GH_TOKEN }} # Usa el secreto que creaste
+          github_token: ${{ secrets.GH_PAGES_TOKEN }}
           branch: gh-pages
-          publish_dir: ./dist # Cambia `./dist` por el directorio donde se generan tus archivos estáticos
+          publish_dir: ./dist
